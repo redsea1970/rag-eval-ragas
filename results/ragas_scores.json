@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "context_precision": 1.0,
+    "context_recall": 0.441,
+    "faithfulness": 0.812,
+    "answer_relevancy": 0.463
+  },
+  "details": [
+    {
+      "id": 1,
+      "question": "Как создать функцию в Python?",
+      "answer": "На основе: docker.md. ## Dockerfile\nDockerfile описывает, как собрать образ. Пример:\nFROM python:3.11\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nCMD [\"python\", \"app.py\"]...",
+      "ground_truth": "Используйте def: def my_func(): pass",
+      "context_precision": 1.0,
+      "context_recall": 0.0,
+      "faithfulness": 0.84,
+      "answer_relevancy": 0.4
+    },
+    {
+      "id": 2,
+      "question": "Как обработать исключение в Python?",
+      "answer": "На основе: docker.md. ## Dockerfile\nDockerfile описывает, как собрать образ. Пример:\nFROM python:3.11\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nCMD [\"python\", \"app.py\"]...",
+      "ground_truth": "Используйте try/except: try: ... except Exception: ...",
+      "context_precision": 1.0,
+      "context_recall": 0.0,
+      "faithfulness": 0.84,
+      "answer_relevancy": 0.4
+    },
+    {
+      "id": 3,
+      "question": "Как создать ветку в Git?",
+      "answer": "На основе: git.md. ## Ветки\nСоздать ветку: git branch <name>. Переключиться: git checkout <name>....",
+      "ground_truth": "Используйте git branch <name> или git checkout -b <name>",
+      "context_precision": 1.0,
+      "context_recall": 0.571,
+      "faithfulness": 0.727,
+      "answer_relevancy": 0.6
+    },
+    {
+      "id": 4,
+      "question": "Как собрать Docker-образ?",
+      "answer": "На основе: docker.md. ## Сборка и запуск\nСобрать образ: docker build -t myapp . Запустить: docker run -p 8000:8000 myapp....",
+      "ground_truth": "Используйте docker build -t myapp .",
+      "context_precision": 1.0,
+      "context_recall": 0.8,
+      "faithfulness": 0.812,
+      "answer_relevancy": 0.75
+    },
+    {
+      "id": 5,
+      "question": "Как отправить изменения в удалённый репозиторий?",
+      "answer": "На основе: docker.md. ## Dockerfile\nDockerfile описывает, как собрать образ. Пример:\nFROM python:3.11\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nCMD [\"python\", \"app.py\"]...",
+      "ground_truth": "Используйте git push -u origin main",
+      "context_precision": 1.0,
+      "context_recall": 0.833,
+      "faithfulness": 0.84,
+      "answer_relevancy": 0.167
+    }
+  ]
+}

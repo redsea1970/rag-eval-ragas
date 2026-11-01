@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Как создать функцию в Python?",
+    "ground_truth": "Используйте def: def my_func(): pass",
+    "expected_keywords": ["def", "функция"]
+  },
+  {
+    "id": 2,
+    "question": "Как обработать исключение в Python?",
+    "ground_truth": "Используйте try/except: try: ... except Exception: ...",
+    "expected_keywords": ["try", "except"]
+  },
+  {
+    "id": 3,
+    "question": "Как создать ветку в Git?",
+    "ground_truth": "Используйте git branch <name> или git checkout -b <name>",
+    "expected_keywords": ["branch", "ветка"]
+  },
+  {
+    "id": 4,
+    "question": "Как собрать Docker-образ?",
+    "ground_truth": "Используйте docker build -t myapp .",
+    "expected_keywords": ["docker", "build"]
+  },
+  {
+    "id": 5,
+    "question": "Как отправить изменения в удалённый репозиторий?",
+    "ground_truth": "Используйте git push -u origin main",
+    "expected_keywords": ["push", "origin"]
+  }
+]
