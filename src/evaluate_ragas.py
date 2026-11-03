@@ -42,6 +42,21 @@ def score_chunk(query_tokens, chunk, doc_freq, total_docs):
     return s
 
 def retrieve(query, chunks, doc_freq, top_k=3):
+    QUERY_EXPANSIONS = {
+        "функци": "def function",
+        "исключен": "try except exception",
+        "список": "списки list",
+        "переменн": "переменные присваивание",
+        "цикл": "for while",
+        "импорт": "import module",
+        "класс": "class",
+        "словар": "словарь dict",
+        "ветк": "ветка branch",
+    }
+    def _expand(q):
+        extra = [v for k, v in QUERY_EXPANSIONS.items() if k in q.lower()]
+        return q + (" " + " ".join(extra) if extra else "")
+    query = _expand(query)
     q_tokens = tokenize(query)
     scored = [(score_chunk(q_tokens, c, doc_freq, len(chunks)), c) for c in chunks]
     scored.sort(key=lambda x: x[0], reverse=True)
