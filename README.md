@@ -53,3 +53,7 @@ flowchart LR
 
 ## Автор
 redsea1970
+
+## Архитектура
+
+Подробная схема проекта: [ARCHITECTURE.md](ARCHITECTURE.md)
